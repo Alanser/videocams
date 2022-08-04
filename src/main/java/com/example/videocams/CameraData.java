@@ -9,7 +9,8 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CameraTokenData {
-    private String value;
-    private int ttl;
+public class CameraData {
+    private long id;
+    private CameraSourceData sourceData;
+    private CameraTokenData tokenData;
 }

@@ -2,6 +2,8 @@ package com.example.videocams;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class VideoCamsApplication {
@@ -10,4 +12,8 @@ public class VideoCamsApplication {
         SpringApplication.run(VideoCamsApplication.class, args);
     }
 
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
 }
